@@ -1,0 +1,12 @@
+[Unit]
+Description=slurm-runner
+
+[Service]
+WorkingDirectory=/cm/shared/admin/git/script-runner-bottle-app/
+Type=forking
+ExecStart=/bin/bash run.sh
+KillMode=process
+
+[Install]
+WantedBy=multi-user.target
+
